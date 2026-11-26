@@ -1,6 +1,6 @@
 # dsh-tag
 
-给 [DeepSeek Harness](https://github.com/deepseek-ai) 的聊天窗口打标签：选中一段话打个标，之后随时从侧边的标签轨道跳回去。
+给 DeepSeek Harness 的聊天窗口打标签：选中一段话打个标，之后随时从侧边的标签轨道跳回去。
 
 标签可以自己起名字、自己配色，跳转后目标文字会按标签颜色闪几下。
 
@@ -19,15 +19,19 @@
 
 ## 安装
 
-需要 DSH 桌面版或 `dsh` 服务端，且 profile 允许加载第三方 bundle 插件。
+需要 DSH 桌面版（或 `dsh` 服务端），且 profile 允许加载第三方 bundle 插件。
 
 ```bash
-# 本地目录安装（开发时推荐，link 安装，改完刷新页面即生效）
-# 在 DSH 的插件管理里执行 install_bundle，target 指向本仓库目录，例如：
-#   file:D:/DScode/dsh-chat-tags
+git clone https://github.com/Zi-Kong/dsh-tag.git
 ```
 
-安装后刷新页面（`Ctrl+R`）即可看到侧栏多出「标签」图标；不用重启 DSH。
+然后在 DSH 的插件管理里安装这个本地 bundle，`target` 指向克隆下来的目录：
+
+```
+file:<克隆目录的绝对路径>
+```
+
+安装后刷新页面（`Ctrl+R`）即可看到侧栏多出「标签」图标，不用重启 DSH。
 
 > Host 侧代码（`index.js`）的改动需要重启 DSH 才会生效，Client 侧（`client.js`、CSS）刷新页面即可。
 
