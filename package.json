@@ -3,6 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "description": "Chat tags: mark selected chat text, colored labels, jump back later",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "chat-tags",
+    "bookmarks",
+    "annotation",
+    "navigation",
+    "highlight"
+  ],
+  "engines": {
+    "dsh": "^0.2.3-alpha.2"
+  },
   "type": "module",
   "exports": {
     ".": "./index.js",
@@ -16,6 +29,8 @@
     "cordis.patch.yml",
     "locale/*.json",
     "docs",
+    "assets",
+    "screenshots.json",
     "icon.svg"
   ],
   "dsh": {

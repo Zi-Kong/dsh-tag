@@ -15,13 +15,21 @@
 
 ## 界面
 
-![预览](docs/preview.svg)
+### 会话里的标签轨道
 
-左侧竖直色条是标签轨道，每个色块对应一条标记，位置按它在整段会话中的比例摆放；点一下跳到那条内容。
+![会话内的标签轨道](assets/screenshot-rail.png)
+
+对话区左侧的竖直轨道按整段会话的比例摆放标签色块：悬停出备注与标签名，点击跳回原文并闪烁高亮。
+
+### 总览面板
+
+![按工作区分组的总览面板](assets/screenshot-overview.png)
+
+侧栏「标签」入口打开的面板：按工作区分组，组头可折叠、可配色；条目两列卡片，左键跳转、右键编辑或删除。
 
 ## 安装
 
-需要 DSH 桌面版（或 `dsh` 服务端），且 profile 允许加载第三方 bundle 插件。
+需要 DSH 桌面版（或 `dsh` 服务端），**要求 DSH ≥ 0.2.3-alpha.2**（`package.json` 里的 `engines.dsh`），且 profile 允许加载第三方 bundle 插件。
 
 ```bash
 git clone https://github.com/Zi-Kong/dsh-tag.git
