@@ -26,6 +26,11 @@ window.__ModuleLoader__.load({
       '#d8b73a',
     ]
 
+    /* Inlined PNG (3564 b64 chars) so the button needs no extra asset route. */
+    const ICON_DELETE = 'data:image/png;base64,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'
+    /* Inlined PNG (6156 b64 chars) so the button needs no extra asset route. */
+    const ICON_JUMP = 'data:image/png;base64,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'
+
     let CTX = null
 
     /* ------------------------------------------------------------------ store */
@@ -40,6 +45,8 @@ window.__ModuleLoader__.load({
       confirm: null,
       toast: null,
       filterTagId: null,
+      wsColor: null,
+      wsColors: {},
     }
     const listeners = new Set()
 
@@ -119,6 +126,103 @@ window.__ModuleLoader__.load({
       return (hit && hit.color) || '#ffd60a'
     }
 
+    /* Workspace (project folder) that owns a Session — used to group the overview.
+       Items come from the `main` slot's useWorkspaces() snapshot. */
+    function workspaceOf(items, sessionId) {
+      const list = Array.isArray(items) ? items : []
+      for (const w of list) {
+        if (w && Array.isArray(w.sessionIds) && w.sessionIds.indexOf(sessionId) >= 0) {
+          return { key: String(w.workspaceId || ''), label: w.title || w.path || '工作区', path: w.path || '' }
+        }
+      }
+      return { key: '', label: '未分组', path: '' }
+    }
+
+    /* Per-workspace tint. A user-picked colour wins; otherwise the workspaceId hashes to a hue.
+       `skin` descends from `base` so the container plate stays light and low-saturation. */
+    const WS_COLOR_KEY = 'dsh-chat-tags:workspace-colors'
+    function readWsColors() {
+      try {
+        const raw = window.localStorage.getItem(WS_COLOR_KEY)
+        const obj = raw ? JSON.parse(raw) : {}
+        return obj && typeof obj === 'object' ? obj : {}
+      } catch (e) {
+        return {}
+      }
+    }
+    function writeWsColors(next) {
+      try {
+        window.localStorage.setItem(WS_COLOR_KEY, JSON.stringify(next))
+      } catch (e) {
+        /* storage blocked — the colour still applies for this render */
+      }
+    }
+
+    function hashHue(key) {
+      let hash = 0
+      for (let i = 0; i < key.length; i += 1) hash = (hash * 31 + key.charCodeAt(i)) | 0
+      return Math.abs(hash) % 360
+    }
+
+    function hexToHsl(hex) {
+      const m = /^#?([0-9a-f]{6})$/i.exec(String(hex || '').trim())
+      if (!m) return null
+      const n = parseInt(m[1], 16)
+      const r = ((n >> 16) & 255) / 255
+      const g = ((n >> 8) & 255) / 255
+      const b = (n & 255) / 255
+      const max = Math.max(r, g, b)
+      const min = Math.min(r, g, b)
+      const l = (max + min) / 2
+      let h = 0
+      let s = 0
+      if (max !== min) {
+        const d = max - min
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
+        if (max === r) h = (g - b) / d + (g < b ? 6 : 0)
+        else if (max === g) h = (b - r) / d + 2
+        else h = (r - g) / d + 4
+        h *= 60
+      }
+      return { h: Math.round(h), s: Math.round(s * 100), l: Math.round(l * 100) }
+    }
+
+    function wsBase(key) {
+      const custom = (STATE.wsColors || {})[key]
+      const picked = custom ? hexToHsl(custom) : null
+      if (picked) return picked
+      if (!key) return { h: 210, s: 8, l: 62 }
+      return { h: hashHue(key), s: 62, l: 55 }
+    }
+
+    function wsSkin(key) {
+      const base = wsBase(key)
+      return {
+        color: 'hsl(' + base.h + ' ' + base.s + '% ' + base.l + '%)',
+        background: 'hsla(' + base.h + ', ' + Math.round(base.s * 0.3) + '%, ' + base.l + '%, 0.09)',
+        borderColor: 'hsla(' + base.h + ', ' + Math.round(base.s * 0.38) + '%, ' + base.l + '%, 0.28)',
+      }
+    }
+
+    /* Folded workspace groups survive a page refresh. */
+    const FOLD_KEY = 'dsh-chat-tags:folded-workspaces'
+    function readFolded() {
+      try {
+        const raw = window.localStorage.getItem(FOLD_KEY)
+        const obj = raw ? JSON.parse(raw) : {}
+        return obj && typeof obj === 'object' ? obj : {}
+      } catch (e) {
+        return {}
+      }
+    }
+    function writeFolded(next) {
+      try {
+        window.localStorage.setItem(FOLD_KEY, JSON.stringify(next))
+      } catch (e) {
+        /* storage blocked — folding still works for this render */
+      }
+    }
+
     function hexToRgba(hex, alpha) {
       let value = String(hex || '').trim().replace('#', '')
       if (value.length === 3) value = value.split('').map((c) => c + c).join('')
@@ -154,6 +258,7 @@ window.__ModuleLoader__.load({
         box.appendChild(btn)
       }
       document.body.appendChild(box)
+      bodyMenu = box
       const w = box.offsetWidth || 150
       const ht = box.offsetHeight || 96
       let x = event.clientX + 6
@@ -804,8 +909,16 @@ window.__ModuleLoader__.load({
 }
 .ct-tag-edit:hover { opacity: 1; background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.18)); }
 .ct-mark {
-  display: flex; gap: 12px; padding: 12px 12px 12px 0; margin-bottom: 6px;
-  border-bottom: 1px solid var(--dsw-alias-border-l1, rgba(127,127,127,.18)); cursor: default;
+  display: flex; gap: 10px; padding: 11px 12px; margin: 0;
+  border: 1px solid var(--dsw-alias-border-l3, rgba(127, 127, 127, .42));
+  border-radius: 10px;
+  background: var(--dsw-alias-bg-layer-1, rgba(127, 127, 127, .06));
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
+}
+.ct-mark:hover {
+  background: var(--dsw-alias-bg-layer-2, rgba(127, 127, 127, .12));
+  border-color: var(--dsw-alias-border-l4, rgba(127, 127, 127, .58));
 }
 .ct-bar { width: 3px; border-radius: 2px; flex: none; }
 .ct-mark-body { flex: 1; min-width: 0; }
@@ -814,7 +927,90 @@ window.__ModuleLoader__.load({
 .ct-mark-text { font-size: 12px; opacity: .66; margin-top: 3px; white-space: pre-wrap; word-break: break-word; }
 .ct-mark-note { font-size: 12px; opacity: .8; margin-top: 4px; }
 .ct-mark-meta { font-size: 11px; opacity: .45; margin-top: 5px; display: flex; gap: 10px; }
-.ct-mark-actions { display: flex; gap: 10px; align-items: flex-start; }
+.ct-mark-actions { display: flex; gap: 6px; align-items: center; align-self: center; flex: none; }
+/* Icon buttons keep a light plate on purpose: the inlined PNGs are black/blue line art,
+   so a theme-colored plate would swallow them in the dark theme. */
+.ct-icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; padding: 0; cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, .14); border-radius: 7px;
+  background: rgba(255, 255, 255, .92);
+}
+.ct-icon-btn:hover { background: #fff; border-color: rgba(0, 0, 0, .28); }
+.ct-icon-btn-danger:hover { background: #fff0f0; border-color: rgba(220, 70, 70, .55); }
+.ct-icon { width: 15px; height: 15px; display: block; pointer-events: none; }
+/* Two marks per row on a wide panel, one per row when the panel gets narrow.
+   Container query (not viewport) so a workspace card split in half still stacks sanely. */
+.ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; align-items: stretch; }
+@container (max-width: 720px) { .ct-grid { grid-template-columns: 1fr; } }
+@media (max-width: 880px) { .ct-grid { grid-template-columns: 1fr; } }
+/* Collapsible Workspace groups in the overview. */
+.ct-ws-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+  align-items: stretch;
+}
+.ct-ws {
+  container-type: inline-size;
+  margin-top: 0;
+  border: 1px solid var(--dsw-alias-border-l2, rgba(127, 127, 127, .28));
+  border-radius: 12px;
+  background: var(--dsw-alias-bg-layer-1, rgba(127, 127, 127, .05));
+  padding: 4px 12px 12px;
+}
+/* A folded card keeps only its header row: no stretched height from the grid row. */
+.ct-ws-folded { padding-bottom: 4px; }
+.ct-ws-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 2px;
+  margin: 0 -4px;
+  border-radius: 8px;
+  user-select: none;
+  background: transparent;
+}
+.ct-ws-caret {
+  flex: none; width: 18px; height: 18px; padding: 0; cursor: pointer;
+  border: none; background: transparent; border-radius: 5px;
+  font-size: 11px; line-height: 1; opacity: .62;
+  color: var(--dsw-alias-label-primary, #1c1c1e);
+}
+.ct-ws-caret:hover { opacity: 1; background: var(--dsw-alias-bg-layer-2, rgba(127, 127, 127, .14)); }
+.ct-ws-name {
+  max-width: 55%; padding: 1px 4px; margin-left: -2px; cursor: pointer;
+  border: none; background: transparent; border-radius: 5px;
+  font: inherit; font-size: 13px; font-weight: 650; text-align: left;
+  color: var(--dsw-alias-label-primary, #1c1c1e);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.ct-ws-name:hover { background: var(--dsw-alias-bg-layer-2, rgba(127, 127, 127, .14)); text-decoration: underline; }
+.ct-ws-dot {
+  flex: none; width: 10px; height: 10px; padding: 0; cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, .18); border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .45) inset;
+}
+.ct-ws-dot:hover { transform: scale(1.18); }
+.ct-swatches { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.ct-swatch {
+  width: 24px; height: 24px; padding: 0; cursor: pointer; border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, .18);
+}
+.ct-swatch-on { box-shadow: 0 0 0 2px var(--dsw-alias-label-primary, #1c1c1e); }
+.ct-ws-caret-old { flex: none; width: 12px; font-size: 11px; opacity: .6; }
+.ct-ws-name-old { font-size: 13px; font-weight: 650; }
+.ct-ws-count { font-size: 11px; opacity: .55; }
+.ct-ws-path {
+  margin-left: auto;
+  max-width: 45%;
+  font-size: 11px;
+  opacity: .4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .ct-empty { opacity: .5; font-size: 13px; padding: 28px 0; }
 .ct-menu {
   position: fixed; z-index: 95; min-width: 132px; pointer-events: auto;
@@ -1413,14 +1609,141 @@ window.__ModuleLoader__.load({
       )
     }
 
-    function Overview() {
+    function Overview(props) {
       const st = useStore()
       const [hovered, setHovered] = useState(null)
       const filter = st.filterTagId
       const marks = filter ? st.marks.filter((m) => m.tagId === filter) : st.marks
       const ordered = marks.slice().reverse()
 
+      /* The `main` slot hands every panel a useWorkspaces() snapshot selector, so the
+         Workspace registry is read from its owner rather than a client service.
+         It re-renders on rename / new folder / moved session by itself. */
+      let wsItems = []
+      try {
+        if (props && typeof props.useWorkspaces === 'function') {
+          const snap = props.useWorkspaces((s) => s)
+          wsItems = (snap && snap.items) || []
+        }
+      } catch (e) {
+        /* selector threw once (registry still loading) — every mark lands in 未分组 */
+      }
+
+      const [folded, setFolded] = useState(readFolded)
+      const toggleFold = (key) => {
+        setFolded((cur) => {
+          const next = Object.assign({}, cur)
+          if (next[key]) delete next[key]
+          else next[key] = true
+          writeFolded(next)
+          return next
+        })
+      }
+
+      const groups = []
+      const groupBy = Object.create(null)
+      ordered.forEach((mark) => {
+        const ws = workspaceOf(wsItems, mark.sessionId)
+        if (!groupBy[ws.key]) {
+          groupBy[ws.key] = { key: ws.key, label: ws.label, path: ws.path, items: [] }
+          groups.push(groupBy[ws.key])
+        }
+        groupBy[ws.key].items.push(mark)
+      })
+
       const countOf = (tagId) => st.marks.filter((m) => m.tagId === tagId).length
+
+      const renderMark = (mark) => {
+        const tag = st.tags.find((t) => t.id === mark.tagId)
+        const editThis = () =>
+          patch({
+            dialog: { mode: 'edit', draft: { ...mark }, newTagName: '', newTagColor: PALETTE[0] },
+          })
+        const deleteThis = () =>
+          confirmAsk('删除这条标签？', async () => {
+            try {
+              await request('/mark/delete', { id: mark.id })
+              toast('已删除')
+            } catch (e) {
+              toast('删除失败：' + String((e && e.message) || e))
+            }
+          })
+        return h(
+          'div',
+          {
+            key: mark.id,
+            className: 'ct-mark',
+            title: '点击跳转到原文',
+            onClick: () => jumpTo(mark),
+            onContextMenu: (event) => {
+              event.preventDefault()
+              event.stopPropagation()
+              showBodyMenu(event, [
+                { label: '编辑标签', run: editThis },
+                { label: '删除标签', run: deleteThis, danger: true },
+              ])
+            },
+          },
+          h('div', { className: 'ct-bar', style: { background: (tag && tag.color) || '#9aa0a6' } }),
+          h(
+            'div',
+            { className: 'ct-mark-body' },
+            h(
+              'div',
+              {
+                className: 'ct-mark-title',
+                onClick: (event) => {
+                  event.stopPropagation()
+                  editThis()
+                },
+              },
+              mark.title || defaultTitle(mark.text)
+            ),
+            mark.text ? h('div', { className: 'ct-mark-text' }, String(mark.text).slice(0, 300)) : null,
+            mark.note ? h('div', { className: 'ct-mark-note' }, mark.note) : null,
+            h(
+              'div',
+              { className: 'ct-mark-meta' },
+              h('span', null, tag ? tag.name : '无标签'),
+              h('span', null, mark.seq === null || mark.seq === undefined ? 'seq ?' : 'turn ' + mark.seq),
+              h('span', null, new Date(mark.createdAt).toLocaleString()),
+              h('span', null, String(mark.sessionId || '').slice(0, 8))
+            )
+          ),
+          h(
+            'div',
+            { className: 'ct-mark-actions' },
+            h(
+              'button',
+              {
+                type: 'button',
+                className: 'ct-icon-btn',
+                title: '跳转到此处',
+                'aria-label': '跳转到此处',
+                onClick: (event) => {
+                  event.stopPropagation()
+                  jumpTo(mark)
+                },
+              },
+              h('img', { className: 'ct-icon', src: ICON_JUMP, alt: '', draggable: false })
+            ),
+            h(
+              'button',
+              {
+                type: 'button',
+                className: 'ct-icon-btn ct-icon-btn-danger',
+                title: '删除这条标签',
+                'aria-label': '删除这条标签',
+                onClick: (event) => {
+                  event.stopPropagation()
+                  deleteThis()
+                },
+              },
+              h('img', { className: 'ct-icon', src: ICON_DELETE, alt: '', draggable: false })
+            )
+          )
+        )
+      }
 
       return h(
         'div',
@@ -1508,65 +1831,72 @@ window.__ModuleLoader__.load({
         ),
         ordered.length === 0
           ? h('div', { className: 'ct-empty' }, '还没有标签。选中聊天里的文字，点「标签」气泡试试。')
-          : ordered.map((mark) => {
-              const tag = st.tags.find((t) => t.id === mark.tagId)
-              return h(
+          : groups.length === 1 && groups[0].key === ''
+            ? h('div', { className: 'ct-grid' }, groups[0].items.map(renderMark))
+            : h(
                 'div',
-                { key: mark.id, className: 'ct-mark' },
-                h('div', { className: 'ct-bar', style: { background: (tag && tag.color) || '#9aa0a6' } }),
-                h(
-                  'div',
-                  { className: 'ct-mark-body' },
-                  h(
+                { className: 'ct-ws-grid' },
+                groups.map((g) => {
+                  const skin = wsSkin(g.key)
+                  const openWsEditor = () => patch({ wsColor: { key: g.key, label: g.label } })
+                  return h(
                     'div',
                     {
-                      className: 'ct-mark-title',
-                      onClick: () =>
-                        patch({
-                          dialog: { mode: 'edit', draft: { ...mark }, newTagName: '', newTagColor: PALETTE[0] },
-                        }),
+                      key: 'ws:' + g.key,
+                      className: 'ct-ws' + (folded[g.key] ? ' ct-ws-folded' : ''),
+                      style: {
+                        background: skin.background,
+                        borderColor: skin.borderColor,
+                        alignSelf: folded[g.key] ? 'start' : undefined,
+                      },
                     },
-                    mark.title || defaultTitle(mark.text)
-                  ),
-                  mark.text ? h('div', { className: 'ct-mark-text' }, String(mark.text).slice(0, 300)) : null,
-                  mark.note ? h('div', { className: 'ct-mark-note' }, mark.note) : null,
-                  h(
-                    'div',
-                    { className: 'ct-mark-meta' },
-                    h('span', null, tag ? tag.name : '无标签'),
-                    h('span', null, mark.seq === null || mark.seq === undefined ? 'seq ?' : 'turn ' + mark.seq),
-                    h('span', null, new Date(mark.createdAt).toLocaleString()),
-                    h('span', null, String(mark.sessionId || '').slice(0, 8))
+                    h(
+                      'div',
+                      {
+                        className: 'ct-ws-head',
+                        onContextMenu: (event) => {
+                          event.preventDefault()
+                          showBodyMenu(event, [{ label: '设置工作区颜色', run: openWsEditor }])
+                        },
+                      },
+                      h('button', {
+                        type: 'button',
+                        className: 'ct-ws-caret',
+                        title: folded[g.key] ? '展开' : '折叠',
+                        'aria-label': folded[g.key] ? '展开工作区' : '折叠工作区',
+                        'aria-expanded': folded[g.key] ? 'false' : 'true',
+                        onClick: (event) => {
+                          event.stopPropagation()
+                          toggleFold(g.key)
+                        },
+                      }, folded[g.key] ? '▸' : '▾'),
+                      h('button', {
+                        type: 'button',
+                        className: 'ct-ws-dot',
+                        title: '设置工作区颜色',
+                        'aria-label': '设置工作区颜色',
+                        style: { background: skin.color },
+                        onClick: (event) => {
+                          event.stopPropagation()
+                          openWsEditor()
+                        },
+                      }),
+                      h('button', {
+                        type: 'button',
+                        className: 'ct-ws-name',
+                        title: g.path || '点击设置工作区颜色',
+                        onClick: (event) => {
+                          event.stopPropagation()
+                          openWsEditor()
+                        },
+                      }, g.label),
+                      h('span', { className: 'ct-ws-count' }, g.items.length + ' 条'),
+                      g.path ? h('span', { className: 'ct-ws-path' }, g.path) : null
+                    ),
+                    folded[g.key] ? null : h('div', { className: 'ct-grid' }, g.items.map(renderMark))
                   )
-                ),
-                h(
-                  'div',
-                  { className: 'ct-mark-actions' },
-                  h(
-                    'button',
-                    { type: 'button', className: 'ct-link', onClick: () => jumpTo(mark) },
-                    '跳转'
-                  ),
-                  h(
-                    'button',
-                    {
-                      type: 'button',
-                      className: 'ct-link',
-                      onClick: () =>
-                        confirmAsk('删除这条标签？', async () => {
-                          try {
-                            await request('/mark/delete', { id: mark.id })
-                            toast('已删除')
-                          } catch (e) {
-                            toast('删除失败：' + String((e && e.message) || e))
-                          }
-                        }),
-                    },
-                    '删除'
-                  )
-                )
+                })
               )
-            })
       )
     }
 
@@ -1633,6 +1963,57 @@ window.__ModuleLoader__.load({
               },
               '保存'
             )
+          )
+        )
+      )
+    }
+
+    function WsColorPicker() {
+      const st = useStore()
+      const pick = st.wsColor
+      if (!pick) return null
+      const close = () => patch({ wsColor: null })
+      const custom = (st.wsColors || {})[pick.key] || ''
+      const choose = (color) => {
+        const next = Object.assign({}, STATE.wsColors)
+        if (color) next[pick.key] = color
+        else delete next[pick.key]
+        writeWsColors(next)
+        patch({ wsColors: next, wsColor: null })
+      }
+      return h(
+        'div',
+        {
+          className: 'ct-mask',
+          style: { zIndex: 90 },
+          onMouseDown: (e) => {
+            if (e.target === e.currentTarget) close()
+          },
+        },
+        h(
+          'div',
+          { className: 'ct-card', style: { width: 'min(320px, calc(100vw - 48px))' } },
+          h('div', { className: 'ct-title' }, '工作区颜色'),
+          h('div', { className: 'ct-label' }, pick.label || '未分组'),
+          h(
+            'div',
+            { className: 'ct-swatches' },
+            PALETTE.map((c) =>
+              h('button', {
+                key: c,
+                type: 'button',
+                className: 'ct-swatch' + (custom.toLowerCase() === c.toLowerCase() ? ' ct-swatch-on' : ''),
+                style: { background: c },
+                title: c,
+                onClick: () => choose(c),
+              })
+            )
+          ),
+          h(
+            'div',
+            { className: 'ct-actions' },
+            h('button', { type: 'button', className: 'ct-btn', onClick: () => choose(null) }, '自动'),
+            h('button', { type: 'button', className: 'ct-btn', onClick: close }, '取消')
           )
         )
       )
@@ -1723,6 +2104,8 @@ window.__ModuleLoader__.load({
 
       refresh()
 
+      STATE.wsColors = readWsColors()
+
       ctx.slots.inject('shell.overlay', () =>
         ctx.slots.register(
           { name: 'shell.overlay', id: 'chat-tags-selection', order: 25 },
@@ -1755,7 +2138,15 @@ window.__ModuleLoader__.load({
         ctx.slots.register(
           { name: 'shell.overlay', id: 'chat-tags-dialog', order: 70 },
           function OverlayDialogs() {
-            return h(React.Fragment, null, h(Dialog, null), h(TagEditor, null), h(Confirm, null), h(Toast, null))
+            return h(
+              React.Fragment,
+              null,
+              h(Dialog, null),
+              h(TagEditor, null),
+              h(WsColorPicker, null),
+              h(Confirm, null),
+              h(Toast, null)
+            )
           }
         )
       )
