@@ -241,9 +241,16 @@ export function apply(ctx) {
           name: 'chat_tags_list',
           description:
             'List chat tags and the marks (tagged snippets of the conversation). Use it to recall what the user flagged for later.',
+          // Standard JSON Schema: ctx.tools.register does NOT run the DSL
+          // transform that defineTool() applies, so the flat map would be sent
+          // to the provider verbatim as input_schema and rejected by the
+          // official API (400 "is not of type object").
           parameters: {
-            sessionId: { type: 'string', description: 'Only marks of this session when provided.' },
-            limit: { type: 'number', description: 'Max marks to return, default 30.' },
+            type: 'object',
+            properties: {
+              sessionId: { type: 'string', description: 'Only marks of this session when provided.' },
+              limit: { type: 'number', description: 'Max marks to return, default 30.' },
+            },
           },
           output: {
             schema: { type: 'string' },
@@ -285,14 +292,18 @@ export function apply(ctx) {
           description:
             'Tag a snippet of the conversation so it can be found and jumped back to later. Creates the tag when tagName is given without tagId.',
           parameters: {
-            sessionId: { type: 'string', required: true, description: 'Session id the snippet belongs to.' },
-            text: { type: 'string', required: true, description: 'The tagged snippet text.' },
-            tagId: { type: 'string', description: 'Existing tag id.' },
-            tagName: { type: 'string', description: 'Tag name; creates the tag when tagId is absent.' },
-            color: { type: 'string', description: 'Hex color for a newly created tag, e.g. #f2a03d.' },
-            title: { type: 'string', description: 'Short label shown on hover; defaults to the snippet prefix.' },
-            note: { type: 'string', description: 'Free-form note.' },
-            seq: { type: 'number', description: 'Turn seq the snippet belongs to, when known.' },
+            type: 'object',
+            properties: {
+              sessionId: { type: 'string', description: 'Session id the snippet belongs to.' },
+              text: { type: 'string', description: 'The tagged snippet text.' },
+              tagId: { type: 'string', description: 'Existing tag id.' },
+              tagName: { type: 'string', description: 'Tag name; creates the tag when tagId is absent.' },
+              color: { type: 'string', description: 'Hex color for a newly created tag, e.g. #f2a03d.' },
+              title: { type: 'string', description: 'Short label shown on hover; defaults to the snippet prefix.' },
+              note: { type: 'string', description: 'Free-form note.' },
+              seq: { type: 'number', description: 'Turn seq the snippet belongs to, when known.' },
+            },
+            required: ['sessionId', 'text'],
           },
           output: {
             schema: { type: 'string' },
@@ -323,7 +334,11 @@ export function apply(ctx) {
           name: 'chat_tags_delete',
           description: 'Delete one chat mark by id.',
           parameters: {
-            id: { type: 'string', required: true, description: 'Mark id to delete.' },
+            type: 'object',
+            properties: {
+              id: { type: 'string', description: 'Mark id to delete.' },
+            },
+            required: ['id'],
           },
           output: {
             schema: { type: 'string' },
